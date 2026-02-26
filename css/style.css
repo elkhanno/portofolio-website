@@ -1,0 +1,206 @@
+.btn-success {
+    background-color: #0bbf11;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #0c7011;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section { 
+    scroll-margin-top: 80px;
+}
+
+/* Transisi yang smooth buat semua elemen */
+.btn,
+.card,
+.nav-link,
+.theme-circle,
+.theme-toggle {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek hover card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Button lebih smooth */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hero text animasi */
+h1 {
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Agar Tampilan judul di Hp tidak kebesaran */
+@media (max-width: 768px) {
+    .display-md-3 {
+        font-size: 2.25rem;
+    }
+}
+
+/* CSS BUAT DARKMODE */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Toggle switch Darkmode*/
+.theme-toggle {
+    width: 56px;
+    height: 28px;
+    background: #444;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.35s ease;
+}
+
+.toggle-circle {
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.45s cubic-bezier(0.4,0,0.2,1);
+}   
+
+/* Buat atur icon sun and moon */
+.icon {
+    font-size: 14px;
+    color: #111;
+    position: absolute;
+    transition: all 0.35s ease;
+}
+
+/* Dark active */
+body.dark .theme-toggle {
+    background: #0bbf11;
+}
+body.dark .toggle-circle {
+    left: 31px;
+}
+
+.hero {
+    background-color: var(--bg-color);
+}
+
+body.dark .navbar {
+    background-color: #0b1220 !important;
+}
+
+body.dark .nav-link,
+body.dark .navbar-brand {
+            color: white !important;
+}
+
+body.dark .card {
+    background: #020617;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+body.dark footer {
+    background: #020617 !important;
+}
+
+/* atur icon fade di mode Dark */
+body.dark .sun {
+    opacity: 0;
+    transform: scale(0.6);
+}
+body.dark .moon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* atur icon fade di mode light */
+.sun {
+    opacity: 1;
+    transform: scale(1);
+}
+.moon {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+body.dark .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+}
+.navbar .nav-link:hover {
+    font-weight: 700;
+}
+
+/* efek typing */
+.typing-text {
+    min-height: 40px;
+    font-weight: 500;
+    color: #0bbf11;
+    letter-spacing: 1px;
+}
+
+body.dark .typing-text {
+    color: #22c55e;
+}
+
+.cursor {
+    display: inline-block;
+    background: currentColor;
+    width: 2px;
+    height: 1.2em;
+    margin-left: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* animasi scroll text */
+.scroll-italic-right {
+    transform: skewX(-10deg);
+}
+.scroll-italic-left {
+    transform: skewX(10deg);
+}
+#scrollText {
+    display: inline-block;
+    transition: all 0.25s ease;
+}

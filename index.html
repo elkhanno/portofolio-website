@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio Michael</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Buat link ke file css nya)-->
+</head>
+
+<body>
+    <!-- Bagian atas WEB (navbar)-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">Michael</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navMenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            
+                            <!-- Toggle Darkmode di Desktop -->
+                            <li class="nav-item ms-3 d-none d-lg-flex align-items-center">
+                                <div class="theme-toggle" id="themeToggle">
+                                    <div class="toggle-circle">
+                                        <i class="bi bi-sun icon sun"></i>
+                                        <i class="bi bi-moon icon moon"></i>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Toggle Darkmode di Mobile -->
+                            <li class="nav-item d-lg-none mt-2">
+                                <div class="theme-toggle" id="themeToggleMobile">
+                                    <div class="toggle-circle">
+                                        <i class="bi bi-sun icon sun"></i>
+                                        <i class="bi bi-moon icon moon"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bagian isi utama (Hero section)-->
+    <main>
+        <section id="home" class="container-fluid min-vh-100 d-flex align-items-center justify-content-center hero">
+            <div class="text-center">
+                <h1 class="display-4 display-md-3 fw-bold">Hello, I'm Michael</h1>
+                <h1 class="display-4" id="scrollText">Welcome to my portfolio website!</h1>
+                <h2 class="typing-text mt-2">
+                    <span id="typing"></span>
+                </h2>
+                <div class="mt-4">
+                    <a href="#projects" class="btn btn-success btn-lg me-2">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-success btn-lg">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <section id="about" class="container mt-5">
+            <h2>About Me</h2>
+            <p>I am currently studying Informatics and have a keen interest in building web applications. 
+            I enjoy learning new technologies and improving my skills.</p>
+        </section>
+
+        <!-- Skill -->
+        <section id="skills" class="container my-5">
+            <h2>Skills</h2>
+            <div class="row mt-3">
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>HTML</h5>
+                        <p>Basic markup language for creating web pages.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>CSS</h5>
+                        <p>Styling language for designing web pages.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>JavaScript</h5>
+                        <p>Programming language for interactive web features.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="container my-5">
+            <h2>Projects</h2>
+
+            <div class="row mt-3">
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>Portofolio Website</h5>
+                        <p>A personal portfolio website to showcase my projects and skills.</p>
+                        <a href="#" class="btn btn-success">View</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>Cashier App</h5>
+                        <p>A simple cashier application for managing sales transactions.</p>
+                        <a href="#" class="btn btn-success">View</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <h5>AI Landing Pages</h5>
+                        <p>Landing pages designed to promote AI-related products and services.</p>
+                        <a href="#" class="btn btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bagian bawah WEB/penutup -->
+    <footer id="contact" class="bg-light text-center py-3">
+            <p>&copy; 2026 Michael Elkhanno Wijaya. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script> <!-- Buat link ke file js nya)-->
+
+</body>
+</html>
