@@ -1,4 +1,17 @@
 const body = document.body;
+
+// Cek preferensi sistem
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Cek localStorage dulu
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    body.classList.toggle("dark", savedTheme === "dark");
+} else if (prefersDark) {
+    body.classList.add("dark");
+}
+
 const toggleDesktop = document.getElementById("themeToggle");
 const toggleMobile = document.getElementById("themeToggleMobile");
 
