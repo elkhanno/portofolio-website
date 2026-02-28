@@ -211,13 +211,14 @@ body.dark .navbar-brand {
             color: white !important;
 }
 
-body.dark .card {
-    background: #020617;
-    color: white;
-    border: 1px solid rgba(255,255,255,0.08);
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
-body.dark footer {
-    background: #020617 !important;
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
 }
 
 /* atur icon fade di mode Dark */
@@ -277,25 +278,28 @@ body.dark .typing-text {
     25%, 75% { opacity: 0; }
 }
 
-/* agar tampilan darkmode mengikuti default aturan dari sistem hp */
-@media (prefers-color-scheme: dark) {
-  :root {
+:root {
+    --bg-color: #ffffff;
+    --text-color:#212529;
+    --card-bg: #ffffff;
+    --footer-bg: #f8f9fa;
+}
+
+body.dark {
     --bg-color: #121212;
     --text-color: #f5f5f5;
-  }
+    --card-bg: #020617;
+    --footer-bg: #020617;
+}
 
-  .navbar {
-    background-color: #0b1220 !important;
-  }
+/* Kontrol warna navbar ikut fungsi variable */
+.navbar {
+  background-color: var(--bg-color) !important;
+}
 
-  .card {
-    background: #020617;
-    color: white;
-  }
-
-  footer {
-    background: #020617 !important;
-  }
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* animasi scroll text */

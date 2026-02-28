@@ -2,6 +2,9 @@ const body = document.body;
 
 // Cek preferensi sistem
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDark) {
+  document.body.classList.add("dark");
+}
 
 // Cek localStorage dulu
 const savedTheme = localStorage.getItem("theme");
@@ -39,6 +42,11 @@ let count = 0;
 let index = 0;
 let currentText = "";
 let letter = "";
+
+// Cek preferensi sistem
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.body.classList.add('dark');
+}
 
 function type() {
   if (count === texts.length) {
