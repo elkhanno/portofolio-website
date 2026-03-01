@@ -23,11 +23,13 @@ section {
 
 /* Transisi yang smooth buat semua elemen */
 .btn,
-.card,
+.card {
+    transition-duration: all 0.35s ease-in-out;
+}
 .nav-link,
 .theme-circle,
 .theme-toggle {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 /* Efek hover card */
@@ -311,5 +313,5 @@ footer {
 }
 #scrollText {
     display: inline-block;
-    transition: all 0.25s ease;
+    transition: all 0.35s ease;
 }
